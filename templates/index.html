@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Блог</title>
+</head>
+<body>
+    <div class="page">
+        <div class="mainref">
+            <a href="/">Домашняя страница </a><a href="/add"> Добавить статью</a>
+        </div>
+        <div class="articles">
+            <h2>Статьи:</h2>
+            <ul>
+                {{range . }}
+                <li>{{.Author}} <a href="/article/{{.Id}}">{{.Name}}</a></li>
+                {{else}}
+                <li>Статей пока нет</li>
+                {{end}}
+            </ul>
+
+        </div>
+    </div>
+</body>
+</html>
